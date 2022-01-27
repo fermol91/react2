@@ -1,0 +1,20 @@
+.Barra {
+    display: flex;
+    background-color: beige;
+    color: black;
+    justify-content: space-around;
+    align-items: center;
+    min-height: px;
+    
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;  
+    width: 100%;
+}
+
+ul li {
+    list-style-type: none;
+}
+
