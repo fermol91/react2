@@ -1,7 +1,9 @@
+import Cartwidget2 from './CartWidget2';
 import './NavBar.css';
 
 const NavBar = () => {
     return (
+        
         <nav className="Barra">
             <ul>
                 <li>Home</li>
@@ -10,7 +12,9 @@ const NavBar = () => {
                 <li>Contacto</li>
                 
             </ul>
+            <Cartwidget2 />
         </nav>
+        
     );
 };
 
