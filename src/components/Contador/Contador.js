@@ -3,15 +3,20 @@ import React, {useState} from "react";
 
 const Contador = () => {
 
+    const stock = 8;
+    const initial = 1;
     
     const [counter, setCounter] = useState(1);
-    const [stock, setStock] = useState(8);
-    
+        
     const handlerCounterUp = () => {
-        setCounter(counter + 1);
+        if (counter < stock){
+            setCounter(counter + 1);
+        }
     };
     const handlerCounterDown = () => {
-        setCounter(counter - 1);
+        if (counter > initial){
+            setCounter(counter - 1);
+        }
     };
 
     return (
