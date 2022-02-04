@@ -7,7 +7,7 @@ const CardListComponent = () => {
     useEffect (() => {
         fetch('https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD')
         .then((response) => response.json())
-        .then((json) => setCoins(json));
+        .then((json) => setCoins(json.Data));
 
     }, []);
 
@@ -16,19 +16,13 @@ const CardListComponent = () => {
     <div>
         {coins.map((coin) => {
             return(
-                <div>
-                <CartWidget data={coin} />
-
-            </div>
-            )
-            
-                     
+                <div key={coin.ID}>
+                    <CartWidget Data={coin} />
+                </div>
+            );
         })}
-        
     </div>
-
   );
-  
-};
 
+};
 export default CardListComponent;
